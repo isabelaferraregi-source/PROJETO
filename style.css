@@ -1,0 +1,299 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: #f5faf5;
+color: #333;
+line-height: 1.7;
+}
+
+/* CABEÇALHO */
+
+header{
+background: linear-gradient(135deg, #1b5e20, #43a047);
+color: white;
+text-align: center;
+padding: 25px;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 3px 10px rgba(0,0,0,.15);
+}
+
+header h1{
+font-size: 3rem;
+}
+
+header p{
+margin-top: 10px;
+}
+
+nav{
+margin-top: 20px;
+}
+
+nav a{
+color: white;
+text-decoration: none;
+margin: 0 15px;
+font-weight: bold;
+transition: .3s;
+}
+
+nav a:hover{
+color: #c8e6c9;
+}
+
+/* BANNER */
+
+.banner{
+height: 90vh;
+
+background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    ),
+    url("img/banner.jpg");
+
+background-size: cover;
+background-position: center;
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+color: white;
+
+}
+
+.banner-texto{
+animation: aparecer 1.5s ease;
+}
+
+.banner h2{
+font-size: 3.5rem;
+margin-bottom: 20px;
+}
+
+.banner p{
+font-size: 1.3rem;
+max-width: 700px;
+}
+
+/* SEÇÕES */
+
+section{
+padding: 80px 10%;
+}
+
+section h2{
+color: #2e7d32;
+font-size: 2.2rem;
+margin-bottom: 30px;
+}
+
+/* SOBRE */
+
+.container{
+display: flex;
+gap: 40px;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.container img{
+width: 500px;
+max-width: 100%;
+border-radius: 20px;
+
+box-shadow: 0 8px 25px rgba(0,0,0,.15);
+
+transition: .4s;
+
+}
+
+.container img:hover{
+transform: scale(1.03);
+}
+
+.container p{
+flex: 1;
+font-size: 1.1rem;
+}
+
+/* CARDS */
+
+.cards{
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 25px;
+}
+
+.card{
+background: white;
+
+padding: 25px;
+
+border-radius: 20px;
+
+box-shadow: 0 5px 15px rgba(0,0,0,.08);
+
+transition: .4s;
+
+}
+
+.card:hover{
+transform: translateY(-10px);
+
+box-shadow: 0 12px 25px rgba(0,0,0,.15);
+
+}
+
+.card h3{
+color: #2e7d32;
+margin-bottom: 10px;
+}
+
+/* BENEFÍCIOS */
+
+ul{
+margin-left: 20px;
+}
+
+ul li{
+margin-bottom: 12px;
+}
+
+/* BOTÃO */
+
+button{
+margin-top: 25px;
+
+padding: 15px 30px;
+
+background: #43a047;
+
+color: white;
+
+border: none;
+
+border-radius: 50px;
+
+font-size: 1rem;
+
+cursor: pointer;
+
+transition: .3s;
+
+}
+
+button:hover{
+background: #2e7d32;
+transform: scale(1.05);
+}
+
+#curiosidade{
+margin-top: 20px;
+font-weight: bold;
+color: #2e7d32;
+}
+
+/* GALERIA */
+
+.galeria{
+display: grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap: 20px;
+
+}
+
+.galeria img{
+width: 100%;
+height: 250px;
+
+object-fit: cover;
+
+border-radius: 15px;
+
+box-shadow: 0 5px 15px rgba(0,0,0,.12);
+
+transition: .4s;
+
+}
+
+.galeria img:hover{
+transform: scale(1.05);
+}
+
+/* RODAPÉ */
+
+footer{
+background: #1b5e20;
+
+color: white;
+
+text-align: center;
+
+padding: 40px;
+
+}
+
+footer p{
+margin: 8px 0;
+}
+
+/* ANIMAÇÃO */
+
+@keyframes aparecer{
+
+from{
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+to{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+header h1{
+    font-size: 2rem;
+}
+
+.banner h2{
+    font-size: 2.2rem;
+}
+
+.banner p{
+    font-size: 1rem;
+}
+
+nav a{
+    display: block;
+    margin: 10px;
+}
+
+section{
+    padding: 60px 7%;
+}
+
+}
